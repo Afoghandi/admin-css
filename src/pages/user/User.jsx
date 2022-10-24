@@ -1,4 +1,5 @@
 import './user.css';
+import { Link, Navigate } from 'react-router-dom';
 import {
 	PermIdentity,
 	CalendarToday,
@@ -13,7 +14,9 @@ export default function User() {
 		<div className='user'>
 			<div className='userTitleContainer'>
 				<h1 className='userTitle'>Edit User</h1>
-				<button className='userAddButton'>Create</button>
+				<Link to='/newUser'>
+					<button className='userAddButton'>Create</button>
+				</Link>
 			</div>
 			<div className='userContainer'>
 				<div className='userShow'>
@@ -106,7 +109,7 @@ export default function User() {
 									className='userUpdateImg'
 								/>
 								<label htmlFor='file'>
-									<Publish />{' '}
+									<Publish className='userUpdateIcon' />{' '}
 								</label>
 								<input type='file' id='file' style={{ display: 'none' }} />
 							</div>
