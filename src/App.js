@@ -10,18 +10,21 @@ import NewUser from './pages/newUser/NewUser';
 import ProductList from './pages/productlist/ProductList';
 import Product from './pages/product/Product';
 import NewProduct from './pages/newProduct/NewProduct';
+import Login from './pages/login/Login';
 const App = () => {
 	return (
 		<BrowserRouter>
 			<Topbar />
+
 			<div className='container'>
+				{' '}
 				<Sidebar />
 				<Routes>
-					<Route path='/' element={<Home />} exact />
-
+					<Route path='/' element={<Home />} />
 					<Route path='/users' element={<UserList />} />
 					<Route path='/newUser' element={<NewUser />} />
 					<Route path='/user/:userId' element={<User />} />
+					<Route path='/login' element={<Login />} />{' '}
 					<Route path='/products' element={<ProductList />} />
 					<Route path='/product/:productId' element={<Product />} />
 					<Route path='/newproduct' element={<NewProduct />} />

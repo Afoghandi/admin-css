@@ -1,5 +1,5 @@
 import './user.css';
-import { Link, Navigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import {
 	PermIdentity,
 	CalendarToday,
